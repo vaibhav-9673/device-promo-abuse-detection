@@ -29,9 +29,7 @@ The objective of this project is to identify and analyze promo abuse and fraudul
 
 ----
 
-
-
-##### 1. Database Setup
+### 1. Database Setup
 **Database Creation**
 The project begins by creating a relational database to store user signup and order behavior data, which is required to analyze promotional abuse patterns.
 
@@ -69,23 +67,17 @@ CREATE TABLE orders (
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 ```
-2. Data Exploration & Cleaning
+### 2. Data Exploration & Cleaning
+<br> (Before performing fraud analysis, the data was validated to ensure accuracy and consistency.)
 
-Before performing fraud analysis, the data was validated to ensure accuracy and consistency.
+**🔍 Data Validation Steps**
+1. Record Count Validation
+2. Verified total number of records in users and orders
+3. Null Value Checks
+4. Checked for missing values in critical columns such as user_id, signup_date, order_date, and promo_used
+5. Referential Integrity Check
+6. Ensured all orders map to valid users
 
-🔍 Data Validation Steps
-
-Record Count Validation
-
-Verified total number of records in users and orders
-
-Null Value Checks
-
-Checked for missing values in critical columns such as user_id, signup_date, order_date, and promo_used
-
-Referential Integrity Check
-
-Ensured all orders map to valid users
 ```
 -- Check for NULL values in users
 SELECT * FROM users
