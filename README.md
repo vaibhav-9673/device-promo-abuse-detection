@@ -1,8 +1,8 @@
 # device-promo-abuse-detection
 SQL, Power BI and Python based fraud detection project to identify promo abuse using user behavior analysis.
 
-```
 **Project Structure**
+```
 device-level-promo-abuse-detection/
 │
 ├── data/
@@ -69,7 +69,15 @@ Stores user-level information such as:
 2. signup_date
 3. city
 
-**Table 02: orders**
+**Table 02: devices**
+Stores device-level information used to identify multiple accounts originating from the same or similar devices, which is a key indicator of promo abuse.
+1. device_id
+2. user_id
+3. device_model
+4. os_version
+5. ip_address
+
+**Table 03: orders**
 Stores transactional data related to user orders:
 1. order_id
 2. user_id
@@ -83,6 +91,15 @@ CREATE TABLE users (
     user_id INT PRIMARY KEY,
     signup_date DATETIME,
     city VARCHAR(50)
+);
+
+CREATE TABLE devices (
+    device_id VARCHAR(50),
+    user_id INT,
+    device_model VARCHAR(50),
+    os_version VARCHAR(20),
+    ip_address VARCHAR(50),
+    PRIMARY KEY (device_id, user_id)
 );
 
 CREATE TABLE orders (
