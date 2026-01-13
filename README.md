@@ -1,6 +1,8 @@
 # device-promo-abuse-detection
 SQL, Power BI and Python based fraud detection project to identify promo abuse using user behavior analysis.
 
+```
+**Project Structure**
 device-level-promo-abuse-detection/
 │
 ├── data/
@@ -24,7 +26,7 @@ device-level-promo-abuse-detection/
 │   └── fraud_user_summary_python.csv
 │
 └── README.md
-
+```
 
 ## 🔴 Problem Statement 
 Online platforms that offer new-user promotions (such as discounts, cashback, or free deliveries) often face significant revenue leakage due to promo abuse. A common abuse pattern occurs when users create multiple accounts to repeatedly claim benefits intended for first-time users.
