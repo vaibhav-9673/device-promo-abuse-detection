@@ -1,4 +1,4 @@
-# device-promo-abuse-detection
+# device-promo-fraud-detection
 SQL, Power BI and Python based fraud detection project to identify promo abuse using user behavior analysis.
 ---
 **Project Structure**
@@ -8,7 +8,8 @@ device-level-promo-abuse-detection/
 ├── data/
 │   ├── users_1000_rows.csv
 │   ├── orders_1000_rows.csv
-│
+│   ├── devices_1000_rows.csv
+|
 ├── sql/
 │   ├── 01_table_creation.sql
 │   ├── 02_data_loading.sql
